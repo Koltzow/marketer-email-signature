@@ -1,7 +1,40 @@
+@font-face {
+  font-family: "Roobert";
+  font-weight: 400;
+  src: url("/assets/fonts/Roobert-Regular.woff2") format("woff2"),
+    url("/assets/fonts/Roobert-Regular.woff") format("woff"),
+    url("/assets/fonts/Roobert-Regular.eot") format("eot");
+}
+
+@font-face {
+  font-family: "Roobert";
+  font-weight: 600;
+  src: url("/assets/fonts/Roobert-Medium.woff2") format("woff2"),
+    url("/assets/fonts/Roobert-Medium.woff") format("woff"),
+    url("/assets/fonts/Roobert-Medium.eot") format("eot");
+}
+
+@font-face {
+  font-family: "Untitled Sans";
+  font-weight: 400;
+  src: url("/assets/fonts/untitled-sans-web-regular.woff2") format("woff2"),
+    url("/assets/fonts/untitled-sans-web-regular.woff") format("woff"),
+    url("/assets/fonts/untitled-sans-web-regular.eot") format("eot");
+}
+
+@font-face {
+  font-family: "Untitled Sans";
+  font-weight: 600;
+  src: url("/assets/fonts/untitled-sans-web-medium.woff2") format("woff2"),
+    url("/assets/fonts/untitled-sans-web-medium.woff") format("woff"),
+    url("/assets/fonts/untitled-sans-web-medium.eot") format("eot");
+}
+
 .main {
   height: 100%;
   display: flex;
   flex-direction: column;
+  font-family: "Untitled Sans", arial, sans-serif;
 }
 
 .formContainer {
@@ -17,7 +50,7 @@
 .title {
   /* Heading/Heading 2+ */
 
-  font-family: Roobert;
+  font-family: "Roobert";
   font-style: normal;
   font-weight: normal;
   font-size: 32px;
@@ -39,7 +72,7 @@
 .field label {
   /* Captions/Caption Small */
 
-  font-family: Untitled Sans;
+  font-family: "Untitled Sans";
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
@@ -103,7 +136,7 @@ input {
 .desc {
   /* Body/Body Small */
 
-  font-family: Untitled Sans;
+  font-family: "Untitled Sans";
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -129,7 +162,7 @@ input {
 }
 
 .subtitle {
-  font-family: Untitled Sans;
+  font-family: "Untitled Sans";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -151,7 +184,7 @@ input {
 .subdesc {
   /* Body/Body XS */
 
-  font-family: Untitled Sans;
+  font-family: "Untitled Sans";
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -196,6 +229,8 @@ input {
   border-radius: 3px;
   padding: 0.3rem;
   font-size: 12px;
+  pointer-events: none;
+  user-select: none;
 }
 
 .logo img {
