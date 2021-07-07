@@ -152,6 +152,18 @@ const Generator = () => {
   </body>
 </html>`;
 
+  let blackStyle = {
+    fontFamily: 'arial, sans-serif',
+    lineHeight: '1.3em',
+    fontSize: '1em',
+    color: '#000'
+  };
+
+  let blackStyleBold = {
+    ...blackStyle,
+    fontWeight: 'bold'
+  };
+
   return (
     <div class={style.main}>
       <div class={style.formContainer}>
@@ -195,12 +207,13 @@ const Generator = () => {
       <div class={style.preview}>
         <label class={style.previewLabel}>Highlight preview and copy</label>
         <div class={style.previewWrapper}>
-          {name && <div class={style.bold}>{nameFormatted}</div>}
-          {title && <div>{title}</div>}
+          {prefix && <><div style={blackStyle}>{prefix}</div><br/><br/></>}
+          {name && <div style={blackStyleBold}>{nameFormatted}</div>}
+          {title && <div style={blackStyle}>{title}</div>}
           {(name || title) && <br />}
-          {phone && <div>{code && `+${code} `}{phone && phoneFormatted}</div>}
-         {email && <div class={style.underline}>{email}</div>}
-          {website && <div class={style.underline}>{websiteClean}</div>}
+          {phone && <div style={blackStyle}>{code && `+${code} `}{phone && phoneFormatted}</div>}
+         {email && <div style={blackStyle} class={style.underline}><a style={blackStyle} href={`mailto:${email}`}>{email}</a></div>}
+          {website && <div style={blackStyle} class={style.underline}><a style={blackStyle} href={website}>{websiteClean}</a></div>}
           <br/>
           <br/>
           <div class={style.logo}><img src={Image} /></div>
