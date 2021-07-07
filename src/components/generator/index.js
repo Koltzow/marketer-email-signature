@@ -207,7 +207,7 @@ const Generator = () => {
         </div>
       </div>
       <div class={style.output}>
-        <button disabled={success} class={`${style.copy} ${success && style.success}`} onClick={() => copyToClipboard(output)}>{success ? 'Copied' : 'Click this to copy'}</button>
+        <button disabled={success} class={`${style.copy} ${success && style.success}`} onClick={() => copyToClipboard(output)}>{success ? 'Copied to clipboard' : 'Click this to copy'}</button>
         <textarea disabled rows={30} class={style.codeWrapper}>
             {output}
         </textarea>
