@@ -52,7 +52,7 @@
 
   font-family: "Roobert";
   font-style: normal;
-  font-weight: normal;
+  font-weight: 600;
   font-size: 32px;
   line-height: 40px;
   /* identical to box height, or 125% */
@@ -131,6 +131,12 @@ input {
 
   background: #f4f4f4;
   border-radius: 2px;
+  border: 1px solid #f4f4f4;
+  outline: none;
+}
+
+input:focus {
+  border-color: black;
 }
 
 .desc {
@@ -164,7 +170,7 @@ input {
 .subtitle {
   font-family: "Untitled Sans";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 18px;
   line-height: 24px;
   /* identical to box height, or 133% */
@@ -220,17 +226,40 @@ input {
 }
 
 .previewLabel {
-  background: #888;
-  color: white;
   position: absolute;
   top: 3rem;
-  text-transform: uppercase;
   right: 3rem;
-  border-radius: 3px;
-  padding: 0.3rem;
-  font-size: 12px;
+
   pointer-events: none;
   user-select: none;
+
+  /* Auto Layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 6px 8px;
+
+  /* Primary Tints/Kyber Green/Kyber 200 */
+
+  background: #cacaca;
+  border-radius: 2px;
+
+  /* Captions/Caption Title */
+
+  font-family: "Untitled Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  /* Text/Ultra White text */
+
+  color: #000;
 }
 
 .logo img {
@@ -265,20 +294,42 @@ input {
 }
 
 .copy {
-  background: #21c980;
-  color: #000;
   position: absolute;
   top: 3rem;
-  text-transform: uppercase;
   right: 3rem;
-  border-radius: 3px;
-  padding: 0.3rem;
+
+  /* Auto Layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 6px 8px;
+
+  /* Primary Tints/Kyber Green/Kyber 200 */
+
+  background: #19a46c;
+  border-radius: 2px;
+
+  /* Captions/Caption Title */
+
+  font-family: "Untitled Sans";
+  font-style: normal;
+  font-weight: normal;
   font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  /* Text/Ultra White text */
+
+  color: #ffffff;
 }
 
 .success {
-  background: #888;
-  color: white;
+  background: #cacaca;
+  color: #000;
 }
 
 .copy:not(:disabled):hover {
