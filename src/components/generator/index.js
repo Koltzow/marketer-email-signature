@@ -15,7 +15,12 @@ const Generator = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [code, setCode] = useState('');
+  const [prefix, setPrefix] = useState('');
   const website = 'https://www.marketer.tech';
+
+  const updatePrefix = (e) => {
+    setPrefix(e.target.value);
+  };
 
   const updateName = (e) => {
     setName(e.target.value);
@@ -157,30 +162,34 @@ const Generator = () => {
         <div class={style.formwrapper}>
           <h2 class={style.subtitle}>Signature information</h2>
           <p class={style.subdesc}>Please fill inn the information below to generate.</p>
-          <div class={style.form}>
+          <form class={style.form}>
             <div class={style.field}>
-              <label>Full name</label>
-              <input type="text" name="fullName" onChange={updateName} />
+              <label for="prefix">Prefix</label>
+              <input id="prefix"  type="text" name="prefix" onChange={updatePrefix} />
             </div>
             <div class={style.field}>
-              <label>Job title</label>
-              <input type="text" name="title" onChange={updateTitle} />
+              <label for="name">Full name</label>
+              <input id="name" autoComplete="on" type="text" name="name" onChange={updateName} />
+            </div>
+            <div class={style.field}>
+              <label for="organization-title">Job title</label>
+              <input id="organization-title" autoComplete="organization-title" type="text" name="organization-title" onChange={updateTitle} />
             </div>
             <div class={style.phone}>
               <div class={style.field}>
-                <label>Country Code</label>
-                <input type="number" min={1} max={300} name="countryCode" onChange={updateCode} />
+                <label for="tel-country-code">Country Code</label>
+                <input id="tel-country-code" autoComplete="tel-country-code" type="text" name="tel-country-code" onChange={updateCode} />
               </div>
               <div class={style.field}>
-                <label>Phone number</label>
-                <input type="text" name="mobile" onChange={updatePhone} />
+                <label for="tel-national">Phone number</label>
+                <input id="tel-national" autoComplete="on" type="text" name="tel-national" onChange={updatePhone} />
               </div>
             </div>
             <div class={style.field}>
-              <label>Email</label>
-              <input type="email" name="email" onChange={updateEmail} />
+              <label for="email">Email</label>
+              <input id="email" autoComplete="on" type="email" name="email" onChange={updateEmail} />
             </div>
-          </div>
+          </form>
         </div>
       </div>
       <div class={style.preview}>
