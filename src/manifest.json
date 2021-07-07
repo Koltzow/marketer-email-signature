@@ -1,6 +1,6 @@
 {
-  "name": "preact",
-  "short_name": "preact",
+  "name": "Marketer - Email Generator",
+  "short_name": "Marketer - Email Generator",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
@@ -8,14 +8,9 @@
   "theme_color": "#673ab8",
   "icons": [
     {
-      "src": "/assets/icons/android-chrome-192x192.png",
+      "src": "/assets/icons/favicon.png",
       "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "/assets/icons/android-chrome-512x512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "32x32"
     }
   ]
 }
