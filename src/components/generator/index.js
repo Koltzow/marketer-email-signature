@@ -151,7 +151,7 @@ const Generator = () => {
     ${prefix && `<div style="font-family: Arial, sans-serif; font-size: 1em; line-height: 1.3em;">${prefix}</div>
     <br/><br/>`}
     ${name && `<div style="font-family: Arial, sans-serif; font-size: 1em; line-height: 1.3em; font-weight: bold;">${nameFormatted}</div>`}
-    ${title && `<div style="font-family: Arial, sans-serif; line-height: 1em; font-size: 1.3em; ">${title}</div>`}
+    ${title && `<div style="font-family: Arial, sans-serif; font-size: 1em; line-height: 1.3em;">${title}</div>`}
     ${(name || title) && `<br />`}
     ${phone && `<div style="font-family: Arial, sans-serif; font-size: 1em; line-height: 1.3em; ">${code && `+${code} `}${phoneFormatted}</div>`}
     ${email && `<div style="font-family: Arial, sans-serif; font-size: 1em; line-height: 1.3em "><a style="color:#000000;" href="mailto:${email}">${email}</a></div>`}
