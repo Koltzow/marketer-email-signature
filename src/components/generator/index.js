@@ -165,7 +165,7 @@ const Generator = () => {
     fontFamily: 'arial, sans-serif',
     lineHeight: '1.3em',
     fontSize: '1em',
-    color: '#000'
+    color: 'inherit'
   };
 
   let blackStyleBold = {
@@ -183,6 +183,7 @@ const Generator = () => {
         <div class={style.formwrapper}>
           <h2 class={style.subtitle}>Signature information</h2>
           <p class={style.subdesc}>Please fill inn the information below to generate.</p>
+          <div class={style.warning}>If you using gmail.com. Please remember to change text color to black for links after pasting.</div>
           <form class={style.form}>
             <div class={style.field}>
               <label for="prefix">Prefix</label>
@@ -212,7 +213,7 @@ const Generator = () => {
             </div>
           </form>
           <h2 class={style.subtitle}>Some clients support embedded image</h2>
-          <p class={style.subdesc}>If you get errors about too long signatures, don't embed</p>
+          <div class={style.warning}>If you get errors about too long signatures, don't embed. Embedding is not recommended for gmail.com.</div>
           <form class={style.form}>
             <div class={style.field}>
               <label><input type="checkbox" name="embed" defaultValue={embed} onClick={updateEmbed}/> Embed image</label>

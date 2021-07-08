@@ -126,6 +126,13 @@
   left: 0;
 }
 
+.warning {
+  background: #fff4e6;
+  padding: 1rem;
+  font-size: 14px;
+  margin-top: 1rem;
+}
+
 input[type="text"],
 input[type="email"] {
   /* Auto Layout */
