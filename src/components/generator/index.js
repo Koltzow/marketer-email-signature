@@ -212,7 +212,7 @@ const Generator = () => {
             </div>
           </form>
           <h2 class={style.subtitle}>Some clients support embedded image</h2>
-          <p class={style.subdesc}>If you get errors about to long signature, don't embed</p>
+          <p class={style.subdesc}>If you get errors about too long signatures, don't embed</p>
           <form class={style.form}>
             <div class={style.field}>
               <label><input type="checkbox" name="embed" defaultValue={embed} onClick={updateEmbed}/> Embed image</label>
